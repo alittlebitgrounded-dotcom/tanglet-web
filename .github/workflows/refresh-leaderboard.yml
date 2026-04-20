@@ -1,0 +1,18 @@
+name: Refresh Leaderboard
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Edge Function
+        run: |
+          curl -X POST \
+            'https://qsphcjpohmbsemnrshvo.supabase.co/functions/v1/refresh-leaderboard' \
+            -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
+            -H 'Content-Type: application/json' \
+            -d '{}'
