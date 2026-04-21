@@ -11,9 +11,9 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --cream: #F5F0E8; --cream-dark: #EDE8DF; --cream-mid: #E8E2D8;
+    --cream: #F5F0E4; --cream-dark: #EBE6D8; --cream-mid: #E5DFD0;
     --ink: #1A1714; --ink-muted: #6B6560; --ink-faint: #A8A29A;
-    --pink: #E8609A; --pink-light: #F0A8C8; --blue: #5BB8F5; --blue-dark: #3A8AC4;
+    --pink: #E05A3A; --pink-light: #F0A08A; --blue: #3D3A9E; --blue-dark: #2D2B6E;
     --gold: #C8A840; --serif: 'Instrument Serif', Georgia, serif;
     --sans: 'Geist', system-ui, sans-serif; --radius: 14px;
   }
@@ -34,7 +34,7 @@
   .btn-signout:hover { border-color: var(--ink); color: var(--ink); }
 
   .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 45% 55%, rgba(232,96,154,0.08) 0%, transparent 70%), radial-gradient(ellipse 50% 45% at 60% 40%, rgba(91,184,245,0.08) 0%, transparent 60%); pointer-events: none; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 45% 55%, rgba(224,90,58,0.08) 0%, transparent 70%), radial-gradient(ellipse 50% 45% at 60% 40%, rgba(61,58,158,0.08) 0%, transparent 60%); pointer-events: none; }
   .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; }
   .eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
   .hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.8rem); line-height: 1.1; color: var(--ink); max-width: 780px; margin-bottom: 1.5rem; font-weight: 400; }
@@ -102,9 +102,9 @@
   .ar-rank { font-size: 0.68rem; color: var(--ink-faint); width: 1.5rem; flex-shrink: 0; }
   .ar-text { font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink); flex: 1; text-align: left; }
   .ar-hearts { font-size: 0.78rem; color: var(--pink); font-weight: 500; flex-shrink: 0; }
-  .vote-btn { background: none; border: 1px solid rgba(232,96,154,0.3); border-radius: 100px; padding: 0.2rem 0.6rem; font-size: 0.72rem; color: var(--pink); cursor: pointer; font-family: var(--sans); transition: background 0.2s; flex-shrink: 0; }
-  .vote-btn:hover { background: rgba(232,96,154,0.08); }
-  .vote-btn.voted { background: rgba(232,96,154,0.12); border-color: var(--pink); }
+  .vote-btn { background: none; border: 1px solid rgba(224,90,58,0.3); border-radius: 100px; padding: 0.2rem 0.6rem; font-size: 0.72rem; color: var(--pink); cursor: pointer; font-family: var(--sans); transition: background 0.2s; flex-shrink: 0; }
+  .vote-btn:hover { background: rgba(224,90,58,0.08); }
+  .vote-btn.voted { background: rgba(224,90,58,0.12); border-color: var(--pink); }
   .vote-btn:disabled { opacity: 0.4; cursor: default; }
   .login-nudge-card { margin-top: 1.25rem; padding: 1rem; border-radius: var(--radius); border: 1px dashed rgba(26,23,20,0.15); text-align: center; }
   .login-nudge-card p { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.75rem; }
@@ -133,14 +133,14 @@
 
   /* hall vote button — bigger and more obvious than the reveal ones */
   .hall-vote-btn {
-    background: none; border: 1.5px solid rgba(232,96,154,0.35);
+    background: none; border: 1.5px solid rgba(224,90,58,0.35);
     border-radius: 100px; padding: 0.28rem 0.75rem;
     font-size: 0.78rem; color: var(--pink); cursor: pointer;
     font-family: var(--sans); transition: background 0.2s, border-color 0.2s;
     display: flex; align-items: center; gap: 0.3rem; white-space: nowrap;
   }
-  .hall-vote-btn:hover { background: rgba(232,96,154,0.08); border-color: var(--pink); }
-  .hall-vote-btn.voted { background: rgba(232,96,154,0.14); border-color: var(--pink); font-weight: 600; }
+  .hall-vote-btn:hover { background: rgba(224,90,58,0.08); border-color: var(--pink); }
+  .hall-vote-btn.voted { background: rgba(224,90,58,0.14); border-color: var(--pink); font-weight: 600; }
   .hall-vote-btn:disabled { opacity: 0.35; cursor: default; }
 
   .hall-empty { font-size: 0.875rem; color: var(--ink-faint); text-align: center; padding: 2rem; font-style: italic; }
@@ -152,9 +152,9 @@
     padding: 3rem 2rem; text-align: center;
     position: relative; overflow: hidden;
   }
-  .try-callout::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 100% at 30% 50%, rgba(232,96,154,0.22) 0%, transparent 60%), radial-gradient(ellipse 50% 80% at 72% 50%, rgba(91,184,245,0.18) 0%, transparent 55%); pointer-events: none; }
+  .try-callout::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 100% at 30% 50%, rgba(224,90,58,0.22) 0%, transparent 60%), radial-gradient(ellipse 50% 80% at 72% 50%, rgba(61,58,158,0.18) 0%, transparent 55%); pointer-events: none; }
   .try-callout-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
-  .try-callout-pill { display: inline-block; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 0.3rem 0.8rem; border-radius: 100px; background: rgba(232,96,154,0.25); color: var(--pink-light); margin-bottom: 1rem; }
+  .try-callout-pill { display: inline-block; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 0.3rem 0.8rem; border-radius: 100px; background: rgba(224,90,58,0.25); color: var(--pink-light); margin-bottom: 1rem; }
   .try-callout h2 { font-family: var(--serif); font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 400; line-height: 1.2; margin-bottom: 0.75rem; }
   .try-callout h2 em { font-style: italic; color: var(--pink-light); }
   .try-callout p { font-size: 0.9rem; color: rgba(245,240,232,0.65); margin-bottom: 1.75rem; line-height: 1.7; }
@@ -179,9 +179,9 @@
   .others-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin: 1.25rem 0 0.6rem; text-align: left; }
   .other-answer { display: flex; align-items: center; gap: 0.75rem; padding: 0.7rem 0.9rem; border-radius: var(--radius); background: var(--cream); border: 1px solid rgba(26,23,20,0.08); margin-bottom: 0.5rem; }
   .other-answer-text { font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--ink); flex: 1; text-align: left; }
-  .heart-btn { background: none; border: 1.5px solid rgba(232,96,154,0.3); border-radius: 100px; padding: 0.3rem 0.75rem; font-size: 0.8rem; color: var(--pink); cursor: pointer; font-family: var(--sans); transition: background 0.2s, border-color 0.2s; flex-shrink: 0; display: flex; align-items: center; gap: 0.3rem; }
-  .heart-btn:hover { background: rgba(232,96,154,0.08); }
-  .heart-btn.hearted { background: rgba(232,96,154,0.12); border-color: var(--pink); }
+  .heart-btn { background: none; border: 1.5px solid rgba(224,90,58,0.3); border-radius: 100px; padding: 0.3rem 0.75rem; font-size: 0.8rem; color: var(--pink); cursor: pointer; font-family: var(--sans); transition: background 0.2s, border-color 0.2s; flex-shrink: 0; display: flex; align-items: center; gap: 0.3rem; }
+  .heart-btn:hover { background: rgba(224,90,58,0.08); }
+  .heart-btn.hearted { background: rgba(224,90,58,0.12); border-color: var(--pink); }
   .heart-btn:disabled { opacity: 0.35; cursor: default; }
   .self-heart-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; border-top: 1px solid rgba(26,23,20,0.07); margin-top: 0.5rem; }
   .self-heart-label { font-size: 0.8rem; color: var(--ink-muted); }
@@ -208,8 +208,8 @@
   .mode-card { background: var(--cream); border-radius: 18px; padding: 1.75rem; border: 1px solid rgba(26,23,20,0.07); transition: transform 0.15s, box-shadow 0.15s; }
   .mode-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26,23,20,0.06); }
   .mode-pill { display: inline-block; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 100px; margin-bottom: 0.9rem; }
-  .mode-pill.daily { background: rgba(91,184,245,0.14); color: var(--blue-dark); }
-  .mode-pill.try { background: rgba(232,96,154,0.12); color: var(--pink); }
+  .mode-pill.daily { background: rgba(61,58,158,0.14); color: var(--blue-dark); }
+  .mode-pill.try { background: rgba(224,90,58,0.12); color: var(--pink); }
   .mode-pill.battle { background: rgba(26,23,20,0.08); color: var(--ink-muted); }
   .mode-card h3 { font-family: var(--serif); font-size: 1.25rem; font-style: italic; font-weight: 400; margin-bottom: 0.5rem; color: var(--ink); }
   .mode-card p { font-size: 0.84rem; color: var(--ink-muted); line-height: 1.7; }
@@ -218,7 +218,7 @@
 
   /* CTA */
   .cta-section { padding: 6rem 2rem; text-align: center; background: var(--ink); color: var(--cream); position: relative; overflow: hidden; }
-  .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 38% 50%, rgba(232,96,154,0.2) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 65% 45%, rgba(91,184,245,0.15) 0%, transparent 55%); pointer-events: none; }
+  .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 38% 50%, rgba(224,90,58,0.2) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 65% 45%, rgba(61,58,158,0.15) 0%, transparent 55%); pointer-events: none; }
   .cta-section h2 { font-family: var(--serif); font-size: clamp(2rem,5vw,3.2rem); font-weight: 400; line-height: 1.15; margin-bottom: 1rem; position: relative; z-index: 1; }
   .cta-section h2 em { font-style: italic; color: var(--pink-light); }
   .cta-section p { font-size: 0.95rem; color: rgba(245,240,232,0.6); max-width: 400px; margin: 0 auto 2.5rem; position: relative; z-index: 1; }
@@ -239,8 +239,8 @@
   .modal p { font-size: 0.875rem; color: var(--ink-muted); margin-bottom: 1.75rem; line-height: 1.6; }
   .username-options { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.25rem; }
   .username-option { background: var(--cream-dark); border: 1.5px solid rgba(26,23,20,0.1); border-radius: var(--radius); padding: 0.875rem 1.25rem; cursor: pointer; transition: border-color 0.2s, background 0.2s; text-align: left; font-family: var(--sans); display: flex; align-items: center; justify-content: space-between; width: 100%; }
-  .username-option:hover { border-color: var(--pink); background: rgba(232,96,154,0.04); }
-  .username-option.selected { border-color: var(--pink); background: rgba(232,96,154,0.07); }
+  .username-option:hover { border-color: var(--pink); background: rgba(224,90,58,0.04); }
+  .username-option.selected { border-color: var(--pink); background: rgba(224,90,58,0.07); }
   .username-option .uname { font-size: 1rem; font-weight: 500; color: var(--ink); }
   .username-option .ucheck { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid rgba(26,23,20,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, border-color 0.2s; }
   .username-option.selected .ucheck { background: var(--pink); border-color: var(--pink); color: white; font-size: 0.7rem; }
@@ -270,7 +270,7 @@
 
 <div class="modal-overlay" id="usernameModal">
   <div class="modal">
-    <svg style="margin:0 auto 1rem;display:block" width="72" height="48" viewBox="0 0 72 48" fill="none"><ellipse cx="26" cy="24" rx="22" ry="22" fill="#E8609A" fill-opacity="0.35"/><ellipse cx="46" cy="24" rx="22" ry="22" fill="#5BB8F5" fill-opacity="0.35"/></svg>
+    <svg style="margin:0 auto 1rem;display:block" width="72" height="48" viewBox="0 0 72 48" fill="none"><ellipse cx="26" cy="24" rx="22" ry="22" fill="#E05A3A" fill-opacity="0.35"/><ellipse cx="46" cy="24" rx="22" ry="22" fill="#3D3A9E" fill-opacity="0.35"/></svg>
     <h2>Pick your name</h2>
     <p>This is how you'll appear on the leaderboard. You can change it once later.</p>
     <div class="username-options" id="usernameOptions"><div class="loading-state"><span class="spinner"></span></div></div>
@@ -281,7 +281,7 @@
 
 <nav>
   <a href="#" class="nav-logo">
-    <svg width="30" height="21" viewBox="0 0 30 21" fill="none"><ellipse cx="10" cy="10.5" rx="10" ry="10" fill="#E8609A" fill-opacity="0.58"/><ellipse cx="20" cy="10.5" rx="10" ry="10" fill="#5BB8F5" fill-opacity="0.58"/></svg>
+    <svg width="30" height="21" viewBox="0 0 30 21" fill="none"><ellipse cx="10" cy="10.5" rx="10" ry="10" fill="#E05A3A" fill-opacity="0.65"/><ellipse cx="20" cy="10.5" rx="10" ry="10" fill="#3D3A9E" fill-opacity="0.65"/></svg>
     Tanglet
   </a>
   <div class="nav-right">
@@ -401,10 +401,10 @@
 <section class="how-section" id="how">
   <h2>One mechanic. Infinite answers.</h2>
   <div class="steps">
-    <div class="step"><div class="step-num">1</div><svg width="64" height="44" viewBox="0 0 64 44" fill="none" style="margin:0 auto 1rem;display:block"><ellipse cx="22" cy="22" rx="19" ry="19" fill="#E8609A" fill-opacity="0.25"/><ellipse cx="42" cy="22" rx="19" ry="19" fill="#5BB8F5" fill-opacity="0.25"/></svg><h3>See the Tangle</h3><p>Two things appear. The overlap is empty and waiting for the thing only you'd say.</p></div>
+    <div class="step"><div class="step-num">1</div><svg width="64" height="44" viewBox="0 0 64 44" fill="none" style="margin:0 auto 1rem;display:block"><ellipse cx="22" cy="22" rx="19" ry="19" fill="#E05A3A" fill-opacity="0.25"/><ellipse cx="42" cy="22" rx="19" ry="19" fill="#3D3A9E" fill-opacity="0.25"/></svg><h3>See the Tangle</h3><p>Two things appear. The overlap is empty and waiting for the thing only you'd say.</p></div>
     <div class="step"><div class="step-num">2</div><svg width="64" height="44" viewBox="0 0 64 44" fill="none" style="margin:0 auto 1rem;display:block"><rect x="6" y="16" width="52" height="18" rx="6" fill="rgba(26,23,20,0.08)"/><rect x="6" y="16" width="26" height="18" rx="6" fill="rgba(26,23,20,0.11)"/></svg><h3>Type something sharp</h3><p>60 characters. No hints. What do they actually have in common?</p></div>
     <div class="step"><div class="step-num">3</div><svg width="64" height="44" viewBox="0 0 64 44" fill="none" style="margin:0 auto 1rem;display:block"><rect x="6" y="6" width="52" height="12" rx="4" fill="#FFF8E6"/><rect x="6" y="6" width="52" height="12" rx="4" stroke="rgba(200,168,64,0.35)" stroke-width="1"/><rect x="6" y="24" width="38" height="8" rx="3" fill="rgba(26,23,20,0.06)"/></svg><h3>The crowd decides</h3><p>Everyone votes. The sharpest answers rise to the Hall of Brilliance.</p></div>
-    <div class="step"><div class="step-num">4</div><svg width="64" height="44" viewBox="0 0 64 44" fill="none" style="margin:0 auto 1rem;display:block"><circle cx="16" cy="22" r="8" fill="#E8609A" fill-opacity="0.45"/><circle cx="32" cy="22" r="8" fill="#5BB8F5" fill-opacity="0.45"/><circle cx="48" cy="22" r="8" fill="rgba(26,23,20,0.15)"/></svg><h3>Battle friends</h3><p>Room codes, timers, one judge per round. Coming soon.</p></div>
+    <div class="step"><div class="step-num">4</div><svg width="64" height="44" viewBox="0 0 64 44" fill="none" style="margin:0 auto 1rem;display:block"><circle cx="16" cy="22" r="8" fill="#E05A3A" fill-opacity="0.45"/><circle cx="32" cy="22" r="8" fill="#3D3A9E" fill-opacity="0.45"/><circle cx="48" cy="22" r="8" fill="rgba(26,23,20,0.15)"/></svg><h3>Battle friends</h3><p>Room codes, timers, one judge per round. Coming soon.</p></div>
   </div>
 </section>
 
@@ -429,7 +429,7 @@
 </section>
 
 <footer>
-  <div class="footer-logo"><svg width="28" height="20" viewBox="0 0 28 20" fill="none"><ellipse cx="9" cy="10" rx="9" ry="9" fill="#E8609A" fill-opacity="0.55"/><ellipse cx="19" cy="10" rx="9" ry="9" fill="#5BB8F5" fill-opacity="0.55"/></svg>Tanglet</div>
+  <div class="footer-logo"><svg width="28" height="20" viewBox="0 0 28 20" fill="none"><ellipse cx="9" cy="10" rx="9" ry="9" fill="#E05A3A" fill-opacity="0.55"/><ellipse cx="19" cy="10" rx="9" ry="9" fill="#3D3A9E" fill-opacity="0.55"/></svg>Tanglet</div>
   <ul class="footer-links"><li><a href="#">About</a></li><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li></ul>
   <span style="font-size:0.75rem;color:var(--ink-faint);">© 2025 Tanglet</span>
 </footer>
@@ -444,7 +444,7 @@ let promptId = null, conceptA = '', conceptB = '';
 let currentUser = null, currentProfile = null, selectedUsername = null;
 let tryPairs = [], tryIndex = 0, tryAnswers = [];
 
-const AVATAR_COLORS = ['#A855F7','#E8609A','#5BB8F5','#F59E0B','#10B981','#EF4444','#6366F1','#14B8A6'];
+const AVATAR_COLORS = ['#A855F7','#E05A3A','#3D3A9E','#F59E0B','#10B981','#EF4444','#6366F1','#14B8A6'];
 function avatarColor(i) { return AVATAR_COLORS[i % AVATAR_COLORS.length]; }
 
 function getSessionId() {
@@ -802,7 +802,7 @@ function advanceTry() {
 function renderTryComplete() {
   document.getElementById('tryGameInner').innerHTML = `
     <div class="try-complete">
-      <svg style="margin:0 auto 1.25rem;display:block" width="80" height="54" viewBox="0 0 80 54" fill="none"><ellipse cx="28" cy="27" rx="26" ry="26" fill="#E8609A" fill-opacity="0.3"/><ellipse cx="52" cy="27" rx="26" ry="26" fill="#5BB8F5" fill-opacity="0.3"/></svg>
+      <svg style="margin:0 auto 1.25rem;display:block" width="80" height="54" viewBox="0 0 80 54" fill="none"><ellipse cx="28" cy="27" rx="26" ry="26" fill="#E05A3A" fill-opacity="0.3"/><ellipse cx="52" cy="27" rx="26" ry="26" fill="#3D3A9E" fill-opacity="0.3"/></svg>
       <h3>Round complete.</h3>
       <p>Your answers are in the pool. When others play the same pairs they'll see what you said and can heart it.<br><br>${!currentUser ? 'Sign in to track your stats and play the Daily Tangle.' : 'Come back tomorrow for fresh pairs.'}</p>
       ${!currentUser ? `<button class="btn-google" onclick="signInWithGoogle()" style="margin:0 auto;">${GOOGLE_SVG}Sign in with Google</button>` : `<a href="#tangle" class="btn-primary" style="display:inline-flex;margin:0 auto;">Play today's Daily Tangle →</a>`}
