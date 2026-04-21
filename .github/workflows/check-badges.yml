@@ -1,0 +1,19 @@
+name: Daily Badge Check
+
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run badge checker for all users
+        run: |
+          curl -X POST \
+            'https://qsphcjpohmbsemnrshvo.supabase.co/rest/v1/rpc/check_all_user_badges' \
+            -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
+            -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
+            -H 'Content-Type: application/json' \
+            -d '{}'
