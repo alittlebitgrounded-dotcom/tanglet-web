@@ -2,7 +2,7 @@ name: Generate Daily Sample Pairs
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,4 +16,4 @@ jobs:
             -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
             -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
             -H 'Content-Type: application/json' \
-            -d '{"p_date": "'"$(date -u +%Y-%m-%d)"'"}'
+            -d '{}'
