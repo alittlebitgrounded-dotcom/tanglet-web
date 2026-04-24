@@ -11,9 +11,15 @@ jobs:
     steps:
       - name: Generate today's sample pairs
         run: |
-          curl -X POST \
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
             'https://qsphcjpohmbsemnrshvo.supabase.co/rest/v1/rpc/generate_daily_sample_pairs' \
             -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
             -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzcGhjanBvaG1ic2VtbnJzaHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MTIyNTAsImV4cCI6MjA5MjI4ODI1MH0.p1UZFhWZ5Jf6FI_D7kmIHCD8WUqaEk-e3X_ltlkgJwg' \
             -H 'Content-Type: application/json' \
-            -d '{}'
+            -d '{}')
+          echo "HTTP status: $RESPONSE"
+          if [ "$RESPONSE" != "200" ] && [ "$RESPONSE" != "204" ]; then
+            echo "ERROR: Unexpected HTTP status $RESPONSE"
+            exit 1
+          fi
+          echo "Success"
